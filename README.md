@@ -1,4 +1,4 @@
-# Frok
+# Fork
 The sentence-transformers library is >1GB, because of it's dependency on PyTorch CUDA, which leads to docker image bloat. To get a slimed down docker image to run in production, depend on PyTorch CPU instead. - Won't have access to GPU anyway.
 
 ## Installation
