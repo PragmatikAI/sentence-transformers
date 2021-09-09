@@ -22,7 +22,7 @@ setup(
         'tokenizers>=0.10.3',
         'tqdm',
         'torch==1.9.0+cpu',
-        'torchvision==0.9.0+cpu',
+        'torchvision==0.10.0+cpu',
         'numpy',
         'scikit-learn',
         'scipy',
