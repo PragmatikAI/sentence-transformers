@@ -1,3 +1,13 @@
+# Frok
+The sentence-transformers library is >1GB, because of it's dependency on PyTorch CUDA, which leads to docker image bloat. To get a slimed down docker image to run in production, depend on PyTorch CPU instead. - Won't have access to GPU anyway.
+
+## Installation
+
+```bash
+pip install -U sentence-transformers -f https://download.pytorch.org/whl/torch_stable.html
+```
+
+
 # Sentence Transformers: Multilingual Sentence, Paragraph, and Image Embeddings using BERT & Co.
 
 This framework provides an easy method to compute dense vector representations for **sentences**, **paragraphs**, and **images**. The models are based on transformer networks like BERT / RoBERTa / XLM-RoBERTa etc. and achieve state-of-the-art performance in various task. Text is embedding in vector space such that similar text is close and can efficiently be found using cosine similarity.
@@ -37,7 +47,7 @@ pip install -U sentence-transformers
 Alternatively, you can also clone the latest version from the [repository](https://github.com/UKPLab/sentence-transformers) and install it directly from the source code:
 ````
 pip install -e .
-```` 
+````
 
 **PyTorch with CUDA**
 If you want to use a GPU / CUDA, you must install PyTorch with the matching CUDA Version. Follow
@@ -60,7 +70,7 @@ model = SentenceTransformer('all-MiniLM-L6-v2')
 Then provide some sentences to the model.
 ````python
 sentences = ['This framework generates embeddings for each input sentence',
-    'Sentences are passed as a list of string.', 
+    'Sentences are passed as a list of string.',
     'The quick brown fox jumps over the lazy dog.']
 sentence_embeddings = model.encode(sentences)
 ````
@@ -81,7 +91,7 @@ We provide a large list of [Pretrained Models](https://www.sbert.net/docs/pretra
 
 
 ## Training
-This framework allows you to fine-tune your own sentence embedding methods, so that you get task-specific sentence embeddings. You have various options to choose from in order to get perfect sentence embeddings for your specific task. 
+This framework allows you to fine-tune your own sentence embedding methods, so that you get task-specific sentence embeddings. You have various options to choose from in order to get perfect sentence embeddings for your specific task.
 
 See [Training Overview](https://www.sbert.net/docs/training/overview.html) for an introduction how to train your own embedding models. We provide [various examples](https://github.com/UKPLab/sentence-transformers/tree/master/examples/training) how to train models on various datasets.
 
@@ -111,8 +121,8 @@ You can use this framework for:
 - [Paraphrase Mining](https://www.sbert.net/examples/applications/paraphrase-mining/README.html)
  - [Translated Sentence Mining](https://www.sbert.net/examples/applications/parallel-sentence-mining/README.html)
  - [Semantic Search](https://www.sbert.net/examples/applications/semantic-search/README.html)
- - [Retrieve & Re-Rank](https://www.sbert.net/examples/applications/retrieve_rerank/README.html) 
- - [Text Summarization](https://www.sbert.net/examples/applications/text-summarization/README.html) 
+ - [Retrieve & Re-Rank](https://www.sbert.net/examples/applications/retrieve_rerank/README.html)
+ - [Text Summarization](https://www.sbert.net/examples/applications/text-summarization/README.html)
 - [Multilingual Image Search, Clustering & Duplicate Detection](https://www.sbert.net/examples/applications/image-search/README.html)
 
 and many more use-cases.
@@ -122,7 +132,7 @@ For all examples, see [examples/applications](https://github.com/UKPLab/sentence
 
 ## Citing & Authors
 If you find this repository helpful, feel free to cite our publication [Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks](https://arxiv.org/abs/1908.10084):
-```bibtex 
+```bibtex
 @inproceedings{reimers-2019-sentence-bert,
     title = "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks",
     author = "Reimers, Nils and Gurevych, Iryna",
@@ -159,10 +169,3 @@ https://www.ukp.tu-darmstadt.de/
 Don't hesitate to send us an e-mail or report an issue, if something is broken (and it shouldn't be) or if you have further questions.
 
 > This repository contains experimental software and is published for the sole purpose of giving additional background details on the respective publication.
-
-
-
-
-
-
-
